@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="rocket.svg" type="image/x-icon"/>
         <title>Unique Websites</title>
@@ -35,7 +38,7 @@
               <a href="getstarted.html">Blog</a>
               </li>
               <li>
-              <a class="btn" href="index.html">
+              <a class="btn btn-black" href="index.html">
               <i class="fas fa-house"></i>Home
               </a>
               </li>
@@ -61,7 +64,7 @@
               </a>
             </li>
             <li>
-              <a class="btn btn-primary btn-shadow" href="index.html">
+              <a class="btn btn-black btn-shadow" href="index.html">
               <i class="fas fa-house"></i>Home
               </a>
             </li>
@@ -70,19 +73,16 @@
           </div>
         </nav>
         <!-- Hero -->
-        <section class="hero bg-white">
-        <div class="container grid">
+        <section class="hero bg-hero">
+        <div class="container">
         <div class="hero-content">
-        <h1 class="hero-heading text-xxl">Unique <span class="blue-text">Websites</span></h1>
+        <h1 class="hero-heading text-xxxl">Unique Websites</h1>
         <h2>An HTML playground</h2>
-        <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hero-span"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</span></p>
         <div class="hero-buttons">
         <a href="#contact-us" class="btn btn-primary">Get started</a>
         <a href="aboutus.html" class="btn"><i class="fas fa-chalkboard-user"></i>Learn more</a>
         </div>
-        </div>
-        <div class="hero-image">
-        <img src="webimages/ai-generated-8876480_1280.png">
         </div>
         </div>
         </section>
@@ -277,7 +277,13 @@
         <p>Fill out the form below to get in touch with one of our team members.</p>
         
         <div class="messageus-box">
-        <form>
+        <form action="https://formsubmit.co/diviannemax@gmail.com" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+
+        <!--Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
             <div class="form-group">
                  <label for="firstname">First name</label>
                  <input type="text" name="firstname" id="firstname" required class="form-element" placeholder="John" />
@@ -292,7 +298,7 @@
             </div>
             <div class="form-group full">
                  <label for="message">Send us a message !</label>
-                 <textarea name="message" id="message" class="form-element" placeholder="I want a website please..."></textarea>
+                 <textarea name="message" id="message" required class="form-element" placeholder="I want a website please..."></textarea>
             </div>
             <div class="submit-group">
             <button type="submit" class="btn btn-primary btn-block btn-textus">SEND MESSAGE</button>
@@ -355,6 +361,7 @@
         <a class="facebook" target="blank"><i class="fab fa-facebook"></i></a>
         <a class="twitter" target="blank"><i class="fab fa-x-twitter"></i></a>
         <a class="reddit" target="blank"><i class="fab fa-reddit"></i></a>
+        <a class="whatsapp" target="blank"><i class="fab fa-whatsapp"></i></a>
         </div>
         </div>
         </div>

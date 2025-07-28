@@ -5,9 +5,10 @@
 }
 
 body {
-      font-family: "Verdana", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 16px;
       line-height: 1.5;
+      letter-spacing: 0.6px;
       background: #fff;
       overflow-x: hidden;     
 }
@@ -29,7 +30,7 @@ img {
 .navbar {
          background-color: white;
          padding: 20px;
-         margin-bottom: 15px;
+         margin-bottom: 8px;
 }
 
 .navbar .container {
@@ -133,25 +134,13 @@ img {
 .hero {
        padding-bottom: 60px;
 }
-
-.hero img {
-           width: 450px; 
-} 
                                                                            
 .hero .hero-content {
-                     width: 100%;
+                     padding: 200px;
 }
 
 .hero .hero-text {
                   margin-bottom: 20px;
-}
-
-.grid {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       justify-content: center;
-       align-items: center;
-       gap: 50px;
 }
 
 .hero-buttons i {
@@ -574,10 +563,9 @@ html {
 }
 
 .team-text p:nth-child(2) {
-                         margin-bottom: 10px;
-                         color: #0044ff;
-                         font-weight: 600;
-                         
+                           margin-bottom: 10px;
+                           color: #0044ff;
+                           font-weight: 600;                   
 }
 
 .team-text p:nth-child(3) {
@@ -687,7 +675,7 @@ img.displaySlide {
 }
 
 .btn-black {
-            background-color: black;
+            background-color: #3e3e42;
             color: #fff;
 }
 
@@ -701,25 +689,48 @@ img.displaySlide {
              box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.btn-simple {
+             display: inline-block;
+             padding: 13px 20px;
+             background: none;
+             color: #fff;
+             font-weight: 600;
+             text-decoration: none;
+             border: none;
+             border-radius: 20px;
+             cursor: pointer;
+             text-align: center;
+             transition: 0.5s;
+}
+
+.text-xxxl {
+            font-weight: 600;
+            line-height: 1.2;
+            font-size: 3.5rem;
+            margin: 40px 0 20px;
+            letter-spacing: 1px;
+}
+
 .text-xxl {
-    font-weight: 600;
-    line-height: 1.2;
-    font-size: 3rem;
-    margin: 40px 0 20px;
+           font-weight: 600;
+           line-height: 1.2;
+           font-size: 3rem;
+           margin: 40px 0 20px;
+           letter-spacing: 1px;
 }
 
 .text-xl {
-    font-weight: normal;
-    line-height: 1.4;
-    font-size: 2.2rem;
-    margin: 40px 0 20px;
+          font-weight: normal;
+          line-height: 1.4;
+          font-size: 2.2rem;
+          margin: 40px 0 20px;
 }
 
 .text-lg {
-    font-weight: normal;
-    line-height: 1.4;
-    font-size: 1.8rem;
-    margin: 30px 0 20px;
+          font-weight: normal;
+          line-height: 1.4;
+          font-size: 1.8rem;
+          margin: 30px 0 20px;
 }
 
 .text-md {
@@ -778,6 +789,17 @@ img.displaySlide {
 
 .bg-cream {
            background: #f2f2f2;
+}
+
+.bg-hero {
+          background-image: linear-gradient(rgba(0, 0, 0, 60%)), url('webimages/ai-generated-8930278_1920.png');
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+}
+
+.bg-transparent {
+                 background-color: rgba(0, 0, 0, 70%);
 }
 
 /* Hamburger Button */
@@ -848,7 +870,8 @@ img.displaySlide {
   }
 
   .result-box {
-               max-height: 200px;
+               max-height: 150px;
+               overflow-y: scroll;
                width: 190px; 
   }
 
@@ -861,15 +884,8 @@ img.displaySlide {
                              display: block;
   }
 
-  
-
-  .hero .hero-content, .hero .hero-text {
-                                         text-align: center;
-                                         width: 100%;
-  }
-
   .hero .hero-content h1 {
-                          font-size: 39px;
+                          font-size: 50px;
   }
 
   .hero .hero-content h2 {
@@ -877,20 +893,12 @@ img.displaySlide {
                           margin-bottom: 5px;
   }
 
-  .hero .hero-buttons .btn {
-                            display: block;
-                            width: 100%;
-                            margin-bottom: 10px;
+  .hero .hero-content {
+                       padding: 130px;
   }
 
-  .hero-image {
-               display: flex;
-               justify-content: center;
-               align-items: center;            
-  }
-
-  .grid {
-         grid-template-columns: 1fr;
+  .hero-span {
+              display: none;
   }
 
   .video-content video {
@@ -943,13 +951,9 @@ img.displaySlide {
   }
 
   .result-box {
-               max-height: 200px;
+               max-height: 150px;
+               overflow-y: scroll;
                width: 190px; 
-  }
-
-  .hero .hero-content, .hero .hero-text {
-                                         text-align: center;
-                                         width: 100%;
   }
 
   .hero .hero-content h1 {
@@ -961,20 +965,12 @@ img.displaySlide {
                           margin-bottom: 5px;
   }
 
-  .hero .hero-buttons .btn {
-                            display: block;
-                            width: 100%;
-                            margin-bottom: 10px;
+  .hero .hero-content {
+                       padding: 200px 10px;
   }
 
-  .hero-image {
-               display: flex;
-               justify-content: center;
-               align-items: center;            
-  }
-
-  .grid {
-         grid-template-columns: 1fr;
+  .hero-span {
+              display: none;
   }
 
   .video-content video {

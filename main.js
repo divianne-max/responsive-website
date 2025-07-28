@@ -72,7 +72,7 @@ function nextSlide(){
 let availableKeywords = [
     { name: 'Home', url: 'index.html' },
     { name: 'Blog', url: 'getstarted.html' },
-    { name: 'Contact Us', url: '#contact-us' },
+    { name: 'Contact Us', url: 'index.html#contact-us' },
     { name: 'Photo Gallery', url: 'aboutus.html#gallery' },
     { name: 'About Us', url: 'aboutus.html' }
 ];
@@ -112,17 +112,20 @@ function selectInput(name, url){
 }
 
 // Share Buttons
-const link = 'https://openjavascript.info/2022/08/22/using-json-in-javascript/';//
+const link = 'https://openjavascript.info/2022/08/22/using-json-in-javascript/';
 const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent(document.querySelector('title').textContent);
 
 console.log([link, msg, title]);
 
 const fb = document.querySelector('.facebook');
-fb.href = 'https://www.facebook.com/share.php?u=${link}';
+fb.href = `https://www.facebook.com/share.php?u=${link}`;
 
 const twitter = document.querySelector('.twitter');
-twitter.href = 'http://www.twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming';
+twitter.href = `http://www.twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
 
 const reddit = document.querySelector('.reddit');
-reddit.href = 'http://www.reddit.com/submit?url=${link}&title=${title}';
+reddit.href = `http://www.reddit.com/submit?url=${link}&title=${title}`;
+
+const whatsapp = document.querySelector('.whatsapp');
+whatsapp.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${msg} ${link}`)}`;
