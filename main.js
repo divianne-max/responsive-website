@@ -112,7 +112,7 @@ function selectInput(name, url){
 }
 
 // Share Buttons
-const link = 'https://openjavascript.info/2022/08/22/using-json-in-javascript/';
+const link = window.location.href;
 const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent(document.querySelector('title').textContent);
 
