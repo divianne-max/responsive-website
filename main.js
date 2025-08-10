@@ -1,6 +1,6 @@
 // FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
-  const faqContainer = document.querySelector(".faq-content");
+  document.querySelectorAll(".faq-content").forEach(faqContainer => {
 
   faqContainer.addEventListener("click", (e) => {
   const groupHeader = e.target.closest(".faq-group-header");
@@ -11,15 +11,56 @@ document.addEventListener("DOMContentLoaded", () => {
   const groupBody = group.querySelector(".faq-group-body");
   const icon = groupHeader.querySelector("i");
 
-  // Toggle icon
-  icon.classList.toggle("fa-plus");
-  icon.classList.toggle("fa-minus");
+  const isOpen = groupBody.classList.contains("open");
 
-  // Toggle visibility of body
-  groupBody.classList.toggle("open");  
-
+    if (isOpen) {
+      // Close the body with animation
+      groupBody.style.maxHeight = 0;
+      groupBody.classList.remove("open");
+      icon.classList.remove("fa-minus");
+      icon.classList.add("fa-plus");
+    } else {
+      // Open the body with scrollHeight
+      groupBody.classList.add("open");
+      groupBody.style.maxHeight = groupBody.scrollHeight + "px";
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-minus");
+    }
+});  
 });
 });
+
+// About Tab
+const menulinks = document.getElementsByClassName("menu-links");
+const faqcontents = document.getElementsByClassName("faq-content");
+
+function openmenu(menuname, event){
+    for(let menulink of menulinks){
+    menulink.classList.remove("active");
+    }
+    for(let faqcontent of faqcontents){
+    faqcontent.classList.remove("active-faq");
+    }
+    event.currentTarget.classList.add("active");
+    document.getElementById(menuname).classList.add("active-faq");
+}
+
+const all = ['general', 'gettingstarted'];
+
+function openAll(event) {
+    for(let menulink of menulinks){
+        menulink.classList.remove("active");
+    }
+    for(let faqcontent of faqcontents){
+        faqcontent.classList.remove("active-faq");
+    }
+    event.currentTarget.classList.add("active");
+    
+    all.forEach(id => {
+        const section = document.getElementById(id);
+        if(section) section.classList.add("active-faq");
+    });
+}
 
 // Mobile Menu
 document.addEventListener("DOMContentLoaded", () => {

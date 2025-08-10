@@ -8,14 +8,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="rocket.svg" type="image/x-icon"/>
+        <link rel="shortcut icon" href="earth.svg" type="image/x-icon"/>
         <title>Unique Websites</title>
     </head>
     <body>
         <nav class="navbar">
           <div class="container">
           <div class="logo">
-          <i class="fa-solid fa-rocket"></i>
+          <div class="logo-full">
+          <i class="fa-solid fa-user-astronaut"></i><h1>Webby</h1>
+          </div>
           <div class="search-box">
           <div class="search-row">
           <input type="text" id="input-box" placeholder="Search" autocomplete="off">
@@ -88,12 +90,12 @@
         </section>
        
         <!-- Video Section -->
-        <section class="video bg-black">
+        <section class="video bg-video">
         <div class="container-sm">
-        <h2 class="video-heading text-xl text-center">See how it works and get started in less than 2 minutes</h2>
+        <h2 class="video-heading text-xl text-center">See how it works and get started<span class="hide-text"> in less than 2 minutes</span> ! 🎬</h2>
         <div class="video-content">
         <a href="#">
-        <video controls src="webimages/13432587_3840_2160_30fps.mp4" width="700" alt="video" class="video-preview">
+        <video controls src="webimages/7692924-hd_1920_1080_25fps.mp4" width="700" alt="video" class="video-preview">
         </a>
 
         <a href="#" class="btn btn-primary">Get Started</a>
@@ -112,7 +114,7 @@
         <img src="webimages/computer-8598079_1280.jpg">
         <div class="quote-text">
         <h1>Joe Bryan</h1>
-        <p>designer</p>
+        <p>engineer</p>
         </div>
         </div>
         </div>
@@ -136,7 +138,7 @@
         <img src="webimages/business-8788627_1280.jpg">
         <div class="quote-text">
         <h1>Bruce Noa</h1>
-        <p>designer</p>
+        <p>manager</p>
         </div>
         </div>
         </div>
@@ -152,15 +154,15 @@
         <div class="container-sm">
         <h3 class="text-xl text-center">Frequently Asked Questions</h3>
         <ul class="faq-menu">
-          <li class="active">All</li>
-          <li>Getting Started</li>
-          <li>Pricing</li>
+          <li class="menu-links" onclick="openAll(event)">All</li>
+          <li class="menu-links active" onclick="openmenu('general', event)">General</li>
+          <li class="menu-links" onclick="openmenu('gettingstarted', event)">Getting Started</li>
         </ul>
-        <div class="faq-content">
+        <div class="faq-content active-faq" id="general">
         <div class="faq-group">
         <div class="faq-group-header">
         <h4 class="text-md">What are the main advantages of having a website ?</h4>
-        <i class="fas fa-plus"></i>
+        <i class="fas fa-minus"></i>
         </div>
         <div class="faq-group-body open">
         <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
@@ -170,7 +172,7 @@
         <div class="faq-group">
         <div class="faq-group-header">
         <h4 class="text-md">What are the main advantages of having a website ?</h4>
-        <i class="fas fa-minus"></i>
+        <i class="fas fa-plus"></i>
         </div>
         <div class="faq-group-body">
         <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
@@ -180,13 +182,46 @@
         <div class="faq-group">
         <div class="faq-group-header">
         <h4 class="text-md">What are the main advantages of having a website ?</h4>
-        <i class="fas fa-minus"></i>
+        <i class="fas fa-plus"></i>
         </div>
         <div class="faq-group-body">
         <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
         </div>
         </div>
         </div>
+
+        <div class="faq-content" id="gettingstarted">
+        <div class="faq-group">
+        <div class="faq-group-header">
+        <h4 class="text-md">What are the main advantages of having a website ?</h4>
+        <i class="fas fa-minus"></i>
+        </div>
+        <div class="faq-group-body open">
+        <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
+        </div>
+        </div>
+
+        <div class="faq-group">
+        <div class="faq-group-header">
+        <h4 class="text-md">What are the main advantages of having a website ?</h4>
+        <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-group-body">
+        <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
+        </div>
+        </div>
+
+        <div class="faq-group">
+        <div class="faq-group-header">
+        <h4 class="text-md">What are the main advantages of having a website ?</h4>
+        <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-group-body">
+        <p>Having a website offers numerous advantages, including increased online presence, improved credibility, and enhanced marketing capabilities.</p>
+        </div>
+        </div>
+        </div>
+
         </div>
         </section>
 
@@ -323,8 +358,8 @@
         <div class="container">
         <div class="footer-grid">
         <div>
-        <a href="index.html">
-        <i class="fa-solid fa-rocket"></i>
+        <a href="index.html" class="logo-link">
+        <i class="fa-solid fa-user-astronaut footer-logo"></i><h1>Webby</h1>
         </a>
         <div class="card">
         <h4>Subscribe to Newsletter</h4>

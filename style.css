@@ -63,8 +63,19 @@ img {
                    font-size: 18px;
 }
 
-.logo i {
-         font-size: 45px;
+.logo-full i {
+              font-size: 34px;
+              color: blue;
+}
+
+.logo-full h1 {
+               font-size: 30px;
+               margin-left: 5px;
+               color: #1c2229;
+}
+
+.logo-full {
+            display: flex;
 }
 
 .logo {
@@ -240,11 +251,15 @@ img {
 }
 
 .faq .faq-group .faq-group-body {
-                                 display: none;
+                                 max-height: 0;
+                                 overflow: hidden;
+                                 opacity: 0;
+                                 transition: max-height 0.2s ease, opacity 0.4s ease;
 }
 
 .faq .faq-group .faq-group-body.open {
-                                      display: block;
+                                      max-height: 1000px;
+                                      opacity: 1;
 }
 
 .faq ul.faq-menu {
@@ -269,6 +284,14 @@ img {
 .faq ul.faq-menu li.active {
                             background: blue;
                             color: #fff;
+}
+
+.faq-content {
+              display: none;
+}
+
+.faq-content.active-faq {
+                         display: block;
 }
 
 /* Pricing */
@@ -395,6 +418,21 @@ img {
          padding: 40px 0;
 }
 
+.logo-link {
+            display: flex;
+            align-items: center;
+}
+
+.footer .footer-logo {
+                      font-size: 28px;
+                      color: #1144fa;
+}
+
+.logo-link h1 {
+               font-size: 28px;
+               color: #fff;
+}
+               
 .footer h4 {
             margin-bottom: 10px;
 }
@@ -452,6 +490,13 @@ html {
 }
 
 /* Blog */
+.firstblog {
+            margin-top: 60px;
+}
+
+.blog-heading {
+               color: #3a3b42;  
+}
 
 .people-image {
                display: flex;
@@ -516,6 +561,10 @@ html {
 }
 
 /* About us page */
+.aboutus-heading {
+                  color: #3a3b42;
+}
+
 .circle-image img {
                    width: 200px;
                    aspect-ratio: 10 / 10;
@@ -714,7 +763,7 @@ img.displaySlide {
 .text-xxl {
            font-weight: 600;
            line-height: 1.2;
-           font-size: 3rem;
+           font-size: 3.4rem;
            margin: 40px 0 20px;
            letter-spacing: 1px;
 }
@@ -791,11 +840,22 @@ img.displaySlide {
            background: #f2f2f2;
 }
 
+.bg-orange {
+            background: #bda77e;
+}
+
 .bg-hero {
           background-image: linear-gradient(rgba(0, 0, 0, 60%)), url('webimages/ai-generated-8930278_1920.png');
           background-size: cover;
           background-position: center;
           color: #fff;
+}
+
+.bg-video {
+           background-image: linear-gradient(rgba(0, 0, 0, 60%)), url('webimages/pexels-elijahsad-3473569.jpg');
+           background-size: cover;
+           background-position: center;
+           color: #fff;
 }
 
 .bg-transparent {
@@ -808,7 +868,6 @@ img.displaySlide {
                    background: none;
                    border: none;
                    cursor: pointer;
-                   padding: 10px;
                    z-index: 1000;
 }
 
@@ -858,6 +917,16 @@ img.displaySlide {
 }
 
 /* Media Queries */
+@media (max-width: 970px) {
+  .navbar .main-menu {
+                      display: none;
+  }
+
+  .navbar .hamburger-button {
+                             display: block;
+  }
+}
+
 @media (max-width: 960px) {
                            .text-xxl {
                                       font-size: 2.5rem;
@@ -876,14 +945,6 @@ img.displaySlide {
   }
 
 @media (max-width: 838px) {
-  .navbar .main-menu {
-                      display: none;
-  }
-
-  .navbar .hamburger-button {
-                             display: block;
-  }
-
   .hero .hero-content h1 {
                           font-size: 50px;
   }
@@ -935,6 +996,15 @@ img.displaySlide {
   .footer .footer-grid > div {
                               text-align: center;
   }
+
+  .logo-link {
+              justify-content: center;
+              margin-bottom: 15px;
+  }
+
+  .footer .card {
+                 margin: 0 90px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -956,8 +1026,16 @@ img.displaySlide {
                width: 190px; 
   }
 
+  .logo-full i {
+                font-size: 30px;
+  }
+
+  .logo-full h1 {
+                 font-size: 26px;
+  }
+
   .hero .hero-content h1 {
-                          font-size: 39px;
+                          font-size: 45px;
   }
 
   .hero .hero-content h2 {
@@ -974,7 +1052,7 @@ img.displaySlide {
   }
 
   .video-content video {
-                        width: 400px;
+                        width: 370px;
   }
                                             
   .testimonials .testimonials-heading {
@@ -1055,6 +1133,10 @@ img.displaySlide {
                               text-align: center;
   }
 
+  .footer .card {
+                 margin: 0 2px;
+  }
+
   .blue-text {
               color: #2c03fc;
   }
@@ -1074,12 +1156,28 @@ img.displaySlide {
 }
 
 @media (max-width: 500px) {
-.text-xxl {
-           font-size: 2rem;
+  .text-xxl {
+           font-size: 2.3rem;
+  }
+
+  .search-box input {
+                     width: 100px;
+  }
+
+  .result-box {
+               width: 130px; 
   }
 }
 
-@media (max-width: 407px) {
+@media (max-width: 409px) {
+  .logo-full i {
+                font-size: 29px;
+  }
+
+  .logo-full h1 {
+                 font-size: 24px;
+  }
+  
   .circle-image img {
                      width: 120px;
   }
@@ -1093,27 +1191,57 @@ img.displaySlide {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
+  .logo-full i {
+                font-size: 29px;
+  }
+
+  .logo-full h1 {
+                 font-size: 22px;
+  }
+}
+
+@media (max-width: 394px) {
   .search-box input {
-                     width: 130px;
+                     width: 85px;
   }
 
   .result-box {
-               width: 165px; 
+               width: 120px; 
+  }
+
+  .logo-full i {
+                font-size: 28px;
+  }
+
+  .logo-full h1 {
+                 font-size: 21px;
   }
 }
 
 @media (max-width: 370px) {
   .search-box input {
-                     width: 110px;
+                     width: 80px;
   }
 
   .result-box {
-               width: 145px; 
+               width: 118px; 
   }
 
   .circle-image {
                  font-size: 12px;
+  }
+
+  .logo-full i {
+                font-size: 27px;
+  }
+
+  .logo-full h1 {
+                 font-size: 20px;
+  }
+
+  .hamburger-button .hamburger-line {
+                                     width: 24px;
   }
 }
 
